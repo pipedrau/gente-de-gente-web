@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" fill="none">
+  <g fill="#FFFFFF">
+    <text x="0" y="88" font-family="Arial Black, Montserrat, sans-serif" font-size="88" font-weight="900" letter-spacing="1">GENTE</text>
+    <text x="310" y="88" font-family="Arial Black, Montserrat, sans-serif" font-size="88" font-weight="900" letter-spacing="1">GENTE</text>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="230" y="22" width="64" height="18" rx="9"/>
+    <rect x="230" y="50" width="64" height="18" rx="9"/>
+    <rect x="230" y="78" width="64" height="18" rx="9"/>
+  </g>
+</svg>
