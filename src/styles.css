@@ -65,9 +65,12 @@ body, a, button, .pill{
 header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #f0e6cf;z-index:20}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:74px;padding:8px 0}
 .logo{font-weight:900;font-size:1.95rem;line-height:.9;max-width:180px}
-.menu{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-.menu a{padding:8px 12px;border-radius:999px;font-weight:700}
-.menu a:not(.btn-dark):hover{background:#fff0ba}
+.menu{display:flex;align-items:center;gap:12px}
+.menu-main{display:flex;gap:10px;align-items:center}
+.menu-main a{padding:8px 12px;border-radius:999px;font-weight:700}
+.menu-main a:hover{background:#fff0ba}
+.menu-ig{margin-top:0}
+.menu .menu-ig{margin-top:0}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{border:1.5px solid #e9dfc8;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 4px 0 rgba(0,0,0,.04)}
 .card img{width:100%;height:240px;object-fit:cover}
@@ -124,10 +127,12 @@ header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #
   .brand img{width:min(70vw,300px)}
   .statement{font-size:46px}
   .block .txt{font-size:38px}
-  .nav{align-items:flex-start}
-  .logo{font-size:1.45rem;max-width:108px}
-  .menu{gap:8px}
-  .menu a{padding:8px 10px}
+  .nav{align-items:center;gap:10px;min-height:64px}
+  .logo{font-size:1.18rem;line-height:.88;max-width:92px}
+  .menu{flex:1;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+  .menu-main{width:100%;display:flex;justify-content:flex-end;gap:4px}
+  .menu-main a{padding:6px 8px;font-size:1rem}
+  .menu-ig{padding:8px 12px;border-radius:12px;font-size:1rem;line-height:1}
   .page-head h2{font-size:2.3rem}
   .card-body h3{font-size:1.85rem}
   .price{font-size:1.75rem}

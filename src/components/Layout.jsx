@@ -6,11 +6,13 @@ export default function Layout({ children }) {
       <header className="navbar">
         <div className="shell nav">
           <Link className="logo" to="/">Gente de Gente</Link>
-          <nav className="menu">
-            <Link to="/shop">Shop</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contacto">Contacto</Link>
-            <a className="btn-dark" target="_blank" rel="noreferrer" href="https://www.instagram.com/gentedgente/">Instagram</a>
+          <nav className="menu" aria-label="Navegación principal">
+            <div className="menu-main">
+              <Link to="/shop">Shop</Link>
+              <Link to="/about">About</Link>
+              <Link to="/contacto">Contacto</Link>
+            </div>
+            <a className="btn-dark menu-ig" target="_blank" rel="noreferrer" href="https://www.instagram.com/gentedgente/">Instagram</a>
           </nav>
         </div>
       </header>
