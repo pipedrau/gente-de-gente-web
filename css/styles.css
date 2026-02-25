@@ -12,6 +12,11 @@
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fff;color:var(--black)}
 a{text-decoration:none;color:inherit}
 
+/* Custom cursor: 2x size, yellow fill with red outline */
+body, a, button, .pill{
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='14' fill='%23ffd400' stroke='%23ea0017' stroke-width='4'/%3E%3C/svg%3E") 24 24, auto;
+}
+
 .home{max-width:430px;margin:0 auto;background:var(--red);min-height:100vh}
 .topbar{padding:18px 16px 16px;color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100vh;justify-content:center}
 .top-icons{display:flex;justify-content:flex-end;gap:10px;font-size:16px;font-weight:700;width:100%}
