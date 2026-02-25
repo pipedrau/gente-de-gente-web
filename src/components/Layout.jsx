@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         <div className="shell nav">
           <Link className="logo" to="/">
             <span className="logo-word">GENTE DE GENTE</span>
-            <img className="logo-svg" src={`${import.meta.env.BASE_URL}assets/gdg_logo_horizontal_white.svg`} alt="Gente de Gente" />
+            <img className="logo-svg" src={`${import.meta.env.BASE_URL}assets/gdg_logo_horizontal_transparent_200.png`} alt="Gente de Gente" />
           </Link>
 
           <button className="hamburger" aria-label="Abrir menú" onClick={() => setOpen(true)}>
