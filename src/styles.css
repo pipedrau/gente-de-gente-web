@@ -12,6 +12,9 @@
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fff;color:var(--black)}
 a{text-decoration:none;color:inherit}
 
+/* Titles */
+h1,h2,h3,h4,.section-title,.page-head h2,.card-body h3,.statement{font-family:'Paytone One', Inter, sans-serif;letter-spacing:.01em}
+
 /* Custom cursor: arrow shape, 2x size, yellow fill with red outline */
 body, a, button, .pill{
   cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M8 6 L8 44 L18 34 L25 50 L33 46 L26 30 L41 30 Z' fill='%23ffd400' stroke='%23ea0017' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") 8 6, auto;
