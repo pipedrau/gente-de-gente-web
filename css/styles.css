@@ -18,7 +18,7 @@ body, a, button, .pill{
 }
 
 .home{width:100%;max-width:none;margin:0;background:var(--red);min-height:100vh}
-.topbar{position:relative;padding:18px 16px 16px;color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100vh;justify-content:center}
+.topbar{position:relative;padding:18px 16px 16px;color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:calc(100vh - 50px);justify-content:center}
 .top-icons{position:absolute;top:18px;right:16px;display:flex;justify-content:flex-end;gap:10px;width:auto;z-index:30}
 .icon-btn{width:34px;height:34px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:#fff;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(3px)}
 .icon-btn:hover{background:rgba(255,255,255,.2)}
@@ -35,8 +35,8 @@ body, a, button, .pill{
 .pill.about{background:#ef95cb;color:#e5162f}
 .pill.contact{background:#f09d00;color:#fff6e8}
 
-.marquee{background:var(--yellow);color:#e41b1b;font-family:'Baloo 2',Inter,sans-serif;font-weight:800;font-size:18px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08)}
-.marquee .track{display:inline-block;padding:8px 0;animation:marq 16s linear infinite}
+.marquee{background:var(--yellow);color:#e41b1b;font-family:'Baloo 2',Inter,sans-serif;font-weight:800;font-size:18px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08);height:50px;display:flex;align-items:center}
+.marquee .track{display:inline-block;padding:0;animation:marq 16s linear infinite}
 .marquee span{margin-right:22px}
 @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -72,15 +72,15 @@ header.navbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee
 @media (min-width:1024px){
   body{background:var(--red)}
   .home{width:100%;max-width:none;background:var(--red);box-shadow:none}
-  .topbar{padding:24px 26px 24px}
+  .topbar{padding:24px 26px 24px;min-height:calc(100vh - 62px)}
   .top-icons{top:22px;right:24px}
   .icon-btn{width:40px;height:40px}
   .icon-btn svg{width:20px;height:20px}
   .brand{font-size:128px;line-height:.78;margin:8px 0 18px}
   .pills{gap:18px}
   .pill{font-size:34px;padding:12px 34px}
-  .marquee{font-size:30px}
-  .marquee .track{padding:12px 0}
+  .marquee{font-size:30px;height:62px}
+  .marquee .track{padding:0}
   .hero-image img{height:560px}
   .badge{font-size:56px;padding:18px 22px;left:24px;bottom:24px}
   .block{min-height:340px}
