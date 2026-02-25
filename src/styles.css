@@ -29,7 +29,7 @@ body, a, button, .pill{
 .brand{margin:8px 0 14px;display:flex;justify-content:center;align-items:center}
 .brand img{width:min(52vw,300px);height:auto;display:block}
 .pills{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;align-items:center}
-.pill{font-family:'Baloo 2',Inter,sans-serif;padding:10px 24px;border-radius:999px;font-weight:800;font-size:clamp(22px,2.4vw,36px);line-height:1;display:inline-flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.5);cursor:pointer}
+.pill{font-family:'Paytone One',Inter,sans-serif;padding:10px 24px;border-radius:999px;font-weight:400;font-size:clamp(22px,2.4vw,36px);line-height:1;display:inline-flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.5);cursor:pointer}
 .pill.shop{background:#00875f;color:#ffd95c}
 .star-ig{width:62px;height:62px;display:inline-flex;align-items:center;justify-content:center;background:#f59bcf;color:#fff8ef;text-decoration:none;clip-path:polygon(50% 0%,59% 8%,69% 3%,73% 13%,84% 10%,84% 22%,95% 22%,91% 33%,100% 39%,93% 48%,100% 58%,90% 63%,95% 75%,84% 75%,84% 88%,73% 84%,68% 96%,58% 91%,50% 100%,42% 91%,32% 96%,27% 84%,16% 88%,16% 75%,5% 75%,10% 63%,0% 58%,7% 48%,0% 39%,9% 33%,5% 22%,16% 22%,16% 10%,27% 13%,31% 3%,41% 8%);border:3px solid #ffd4ea;box-shadow:0 2px 0 rgba(0,0,0,.15)}
 .star-ig svg{width:22px;height:22px;stroke-width:2.3;display:block}
@@ -41,18 +41,19 @@ body, a, button, .pill{
 .pill.about{background:#ef95cb;color:#e5162f}
 .pill.contact{background:#f09d00;color:#fff6e8}
 
-.marquee{background:var(--yellow);color:#e41b1b;font-family:'Baloo 2',Inter,sans-serif;font-weight:800;font-size:18px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08);height:50px;display:flex;align-items:center}
-.marquee .track{display:inline-block;padding:0;animation:marq 16s linear infinite}
-.marquee span{margin-right:22px}
+.marquee{background:var(--yellow);color:#e41b1b;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:27px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08);height:75px;display:flex;align-items:center}
+.marquee-inner{display:flex;width:max-content;animation:marq 18s linear infinite}
+.marquee .track{display:flex;flex-shrink:0;padding:0}
+.marquee span{margin-right:28px}
 @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 .hero-image{position:relative}
 .hero-image img{width:100%;display:block;height:360px;object-fit:cover}
-.badge{position:absolute;left:16px;bottom:16px;background:#e9001d;color:#fff;padding:12px 14px;font-weight:900;font-size:36px;line-height:.9;transform:rotate(-10deg);clip-path:polygon(50% 0%,61% 14%,78% 8%,82% 24%,98% 24%,90% 40%,100% 52%,90% 64%,98% 80%,82% 80%,78% 96%,61% 90%,50% 100%,39% 90%,22% 96%,18% 80%,2% 80%,10% 64%,0% 52%,10% 40%,2% 24%,18% 24%,22% 8%,39% 14%)}
+.badge{position:absolute;left:16px;bottom:16px;background:#e9001d;color:#fff;padding:12px 14px;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:36px;line-height:.9;transform:rotate(-10deg);clip-path:polygon(50% 0%,61% 14%,78% 8%,82% 24%,98% 24%,90% 40%,100% 52%,90% 64%,98% 80%,82% 80%,78% 96%,61% 90%,50% 100%,39% 90%,22% 96%,18% 80%,2% 80%,10% 64%,0% 52%,10% 40%,2% 24%,18% 24%,22% 8%,39% 14%)}
 
 .block{display:grid;grid-template-columns:1fr 1fr;min-height:205px}
 .block .img img{width:100%;height:100%;object-fit:cover;display:block}
-.block .txt{display:flex;align-items:center;justify-content:center;padding:24px;color:#fff;font-size:46px;line-height:.95;font-weight:900;text-transform:lowercase}
+.block .txt{display:flex;align-items:center;justify-content:center;padding:24px;color:#fff;font-size:46px;line-height:.95;font-family:'Paytone One',Inter,sans-serif;font-weight:400;text-transform:lowercase}
 .block.pink .txt{background:var(--pink);color:#fff;text-align:center}
 .block.pink .img img{object-position:center center}
 .block.yellow .txt{background:var(--yellow);color:#fff}
@@ -181,7 +182,7 @@ header.navbar{position:sticky;top:0;background:#0c8b5f;border-bottom:none;z-inde
   .pill{font-size:34px;padding:12px 34px}
   .star-ig{width:74px;height:74px}
   .star-ig svg{width:26px;height:26px}
-  .marquee{font-size:30px;height:62px}
+  .marquee{font-size:45px;height:93px}
   .marquee .track{padding:0}
   .hero-image img{height:560px}
   .badge{font-size:56px;padding:18px 22px;left:24px;bottom:24px}

@@ -33,10 +33,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="marquee"><div className="track"><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span></div></section>
+      <section className="marquee">
+        <div className="marquee-inner">
+          <div className="track"><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span></div>
+          <div className="track"><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span></div>
+        </div>
+      </section>
 
       <section className="hero-image">
-        <img src={A('hero-collection-v2.webp')} alt="Nueva colección" />
+        <img src={A('hero-collection-v3.webp')} alt="Nueva colección" />
         <div className="badge">Nueva<br/>Colección</div>
       </section>
 
