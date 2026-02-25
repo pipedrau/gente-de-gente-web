@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   const [open, setOpen] = useState(false)
+  const A = (name) => `${import.meta.env.BASE_URL}assets/${name}`
 
   return (
     <main className="home">
@@ -32,22 +33,22 @@ export default function Home() {
       <section className="marquee"><div className="track"><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span></div></section>
 
       <section className="hero-image">
-        <img src="assets/hero-collection-v2.webp" alt="Nueva colección" />
+        <img src={A('hero-collection-v2.webp')} alt="Nueva colección" />
         <div className="badge">Nueva<br/>Colección</div>
       </section>
 
       <section className="block pink">
-        <div className="img"><img src="assets/block-sofa-v2.webp" alt="Decoración" /></div>
+        <div className="img"><img src={A('block-sofa-v2.webp')} alt="Decoración" /></div>
         <div className="txt">Para<br/>decorar<br/>tu sofá</div>
       </section>
 
       <section className="block yellow">
         <div className="txt">For<br/>everyday<br/>joy</div>
-        <div className="img"><img src="assets/block-hanger-v2.webp" alt="Ropa" /></div>
+        <div className="img"><img src={A('block-hanger-v2.webp')} alt="Ropa" /></div>
       </section>
 
       <section className="block green">
-        <div className="img"><img src="assets/block-mugs-v2.webp" alt="Mugs" /></div>
+        <div className="img"><img src={A('block-mugs-v2.webp')} alt="Mugs" /></div>
         <div className="txt">For<br/>everyday<br/>joy</div>
       </section>
 
