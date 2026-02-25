@@ -139,12 +139,12 @@ header.navbar{position:sticky;top:0;background:#0c8b5f;border-bottom:none;z-inde
 .faq-list p{margin:8px 0 0;color:#555}
 @media (max-width:760px){
   header.navbar{background:#0c8b5f;border-bottom:none}
-  header.navbar .shell{padding-left:max(16px, env(safe-area-inset-left));padding-right:max(16px, env(safe-area-inset-right))}
+  header.navbar .shell{padding-left:max(22px, env(safe-area-inset-left));padding-right:max(22px, env(safe-area-inset-right))}
   .grid{grid-template-columns:1fr 1fr}
   .brand img{width:min(70vw,300px)}
   .statement{font-size:46px}
   .block .txt{font-size:38px}
-  .nav{align-items:center;gap:10px;min-height:72px;padding:10px 2px}
+  .nav{align-items:center;gap:10px;min-height:72px;padding:10px 0}
   .logo{font-size:2rem;line-height:1;max-width:none;white-space:nowrap;color:#fff;min-height:30px}
   .logo-word{display:none}
   .logo-svg{display:block;width:min(200px,52vw);height:auto}
