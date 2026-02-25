@@ -13,7 +13,7 @@ export default function Home() {
           <a className="icon-btn" href="#" aria-label="Buscar"><Search /></a>
           <a className="icon-btn" href="#" aria-label="Carrito"><ShoppingCart /></a>
         </div>
-        <div className="brand">GENTE<br/>DE GENTE</div>
+        <div className="brand"><img src={A('gdg_logo_vertical_300.webp')} alt="Gente de Gente" /></div>
         <div className="pills">
           <div className="shop-wrap">
             <button className="pill shop" onClick={() => setOpen(v => !v)}>SHOP</button>
