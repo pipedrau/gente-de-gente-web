@@ -12,7 +12,10 @@
 <body>
   <main class="home">
     <section class="topbar">
-      <div class="top-icons">⌕ 🛒</div>
+      <div class="top-icons">
+        <a class="icon-btn" href="#" aria-label="Buscar"><i data-lucide="search"></i></a>
+        <a class="icon-btn" href="#" aria-label="Carrito"><i data-lucide="shopping-cart"></i></a>
+      </div>
       <div class="brand">GENTE<br/>DE GENTE</div>
       <div class="pills">
         <div class="shop-wrap">
@@ -61,7 +64,9 @@
     </section>
     <div class="footer-space"></div>
   </main>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
+    lucide.createIcons();
     const shopToggle = document.getElementById('shopToggle');
     const shopDropdown = document.getElementById('shopDropdown');
     if (shopToggle && shopDropdown) {
