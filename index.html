@@ -1,4 +1,53 @@
-<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gente de Gente</title><link rel="stylesheet" href="css/styles.css"><script src="js/data.js"></script><script src="js/app.js"></script></head><body><script>
-const featured=window.GDG_PRODUCTS.slice(0,6).map(card).join('');
-mountLayout(`<section class='hero'><h1>Gente de Gente</h1><p>Souvenirs, personajes de tela, ropa, papelería y piezas para el hogar que celebran a la gente real.</p></section><div class='banner'><div class='banner-track'><span>WE CELEBRATE PEOPLE</span><span>WE CELEBRATE PEOPLE</span><span>WE CELEBRATE PEOPLE</span><span>WE CELEBRATE PEOPLE</span><span>WE CELEBRATE PEOPLE</span></div></div><h2 class='section-title'>Destacados</h2><section class='grid'>${featured}</section>`);
-</script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gente de Gente</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="home">
+    <section class="topbar">
+      <div class="top-icons">⌕ 🛒</div>
+      <div class="brand">GENTE<br/>DE GENTE</div>
+      <div class="pills">
+        <a class="pill shop" href="shop.html">SHOP</a>
+        <a class="pill about" href="about.html">ABOUT</a>
+        <a class="pill contact" href="contacto.html">CONTACTO</a>
+      </div>
+    </section>
+
+    <section class="marquee"><div class="track"><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span><span>WE CELEBRATE PEOPLE •</span></div></section>
+
+    <section class="hero-image">
+      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80" alt="Nueva colección" />
+      <div class="badge">Nueva<br/>Colección</div>
+    </section>
+
+    <section class="block pink">
+      <div class="img"><img src="https://images.unsplash.com/photo-1618331835717-801e976710b2?auto=format&fit=crop&w=1200&q=80" alt="Decoración" /></div>
+      <div class="txt">Para<br/>decorar<br/>tu sofá</div>
+    </section>
+
+    <section class="block yellow">
+      <div class="txt">For<br/>everyday<br/>joy</div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1578922755264-5fd4e72d1653?auto=format&fit=crop&w=1200&q=80" alt="Ropa" /></div>
+    </section>
+
+    <section class="block green">
+      <div class="img"><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=1200&q=80" alt="Mugs" /></div>
+      <div class="txt">For<br/>everyday<br/>joy</div>
+    </section>
+
+    <section class="statement">Creativity for<br/>everyday inspo</section>
+
+    <section class="social-strip">
+      <a class="cell c1" href="https://instagram.com" target="_blank">◉</a>
+      <a class="cell c2" href="https://instagram.com" target="_blank">◉</a>
+      <a class="cell c3" href="https://instagram.com" target="_blank">◉</a>
+    </section>
+    <div class="footer-space"></div>
+  </main>
+</body>
+</html>
