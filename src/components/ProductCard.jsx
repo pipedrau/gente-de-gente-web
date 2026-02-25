@@ -9,6 +9,7 @@ export default function ProductCard({ p }) {
           <div className="tag">{p.cat}</div>
           <h3>{p.name}</h3>
           <div className="price">{p.price}</div>
+          <div className="card-cta">Ver detalle</div>
         </div>
       </Link>
     </article>
