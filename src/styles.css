@@ -71,6 +71,17 @@ header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #
 .menu-main a:hover{background:#fff0ba}
 .menu-ig{margin-top:0}
 .menu .menu-ig{margin-top:0}
+
+.hamburger{display:none;width:42px;height:42px;border-radius:10px;border:1.5px solid #e3d7ba;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:20px;height:2.5px;background:#111;border-radius:999px}
+
+.drawer-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:60}
+.drawer-backdrop.open{opacity:1;pointer-events:auto}
+.drawer{position:absolute;top:0;right:0;height:100%;width:min(82vw,360px);background:#0c8b5f;transform:translateX(100%);transition:transform .26s ease;padding:20px 18px;display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer-close{align-self:flex-end;background:transparent;border:none;color:#fff;font-size:34px;line-height:1;cursor:pointer}
+.drawer-menu{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center}
+.drawer-menu a{color:#fff;font-size:2rem;font-weight:800;line-height:1.05}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{border:1.5px solid #e9dfc8;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 4px 0 rgba(0,0,0,.04)}
 .card img{width:100%;height:240px;object-fit:cover}
@@ -129,10 +140,8 @@ header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #
   .block .txt{font-size:38px}
   .nav{align-items:center;gap:10px;min-height:64px}
   .logo{font-size:1.18rem;line-height:.88;max-width:92px}
-  .menu{flex:1;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
-  .menu-main{width:100%;display:flex;justify-content:flex-end;gap:4px}
-  .menu-main a{padding:6px 8px;font-size:1rem}
-  .menu-ig{padding:8px 12px;border-radius:12px;font-size:1rem;line-height:1}
+  .desktop-menu{display:none}
+  .hamburger{display:flex}
   .page-head h2{font-size:2.3rem}
   .card-body h3{font-size:1.85rem}
   .price{font-size:1.75rem}
