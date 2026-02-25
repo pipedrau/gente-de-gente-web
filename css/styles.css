@@ -13,11 +13,11 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-ser
 a{text-decoration:none;color:inherit}
 
 .home{max-width:430px;margin:0 auto;background:var(--red);min-height:100vh}
-.topbar{padding:14px 16px 12px;color:#fff}
-.top-icons{display:flex;justify-content:flex-end;gap:10px;font-size:16px;font-weight:700}
-.brand{font-family:'Baloo 2',Inter,sans-serif;font-weight:800;font-size:56px;line-height:.82;color:#ffd95c;letter-spacing:.5px;text-transform:uppercase;margin:6px 0 10px}
-.pills{display:flex;gap:10px;flex-wrap:wrap}
-.pill{font-family:'Baloo 2',Inter,sans-serif;padding:8px 18px;border-radius:999px;font-weight:800;font-size:20px;line-height:1;display:inline-flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.45)}
+.topbar{padding:18px 16px 16px;color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center}
+.top-icons{display:flex;justify-content:flex-end;gap:10px;font-size:16px;font-weight:700;width:100%}
+.brand{font-family:'Baloo 2',Inter,sans-serif;font-weight:800;font-size:clamp(64px,11vw,138px);line-height:.82;color:#ffd95c;letter-spacing:.5px;text-transform:uppercase;margin:8px 0 14px}
+.pills{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.pill{font-family:'Baloo 2',Inter,sans-serif;padding:10px 24px;border-radius:999px;font-weight:800;font-size:clamp(22px,2.4vw,36px);line-height:1;display:inline-flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.5)}
 .pill.shop{background:#00875f;color:#ffd95c}
 .pill.about{background:#ef95cb;color:#e5162f}
 .pill.contact{background:#f09d00;color:#fff6e8}
@@ -59,11 +59,11 @@ header.navbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee
 @media (min-width:1024px){
   body{background:#efefef}
   .home{max-width:1200px;background:var(--red);box-shadow:0 20px 50px rgba(0,0,0,.18)}
-  .topbar{padding:18px 26px 20px}
+  .topbar{padding:24px 26px 24px}
   .top-icons{font-size:20px}
-  .brand{font-size:88px;line-height:.82;margin:8px 0 14px}
-  .pills{gap:14px}
-  .pill{font-size:24px;padding:10px 24px}
+  .brand{font-size:128px;line-height:.78;margin:8px 0 18px}
+  .pills{gap:18px}
+  .pill{font-size:34px;padding:12px 34px}
   .marquee{font-size:30px}
   .marquee .track{padding:12px 0}
   .hero-image img{height:560px}
@@ -76,7 +76,7 @@ header.navbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee
 
 @media (min-width:1400px){
   .home{max-width:1320px}
-  .brand{font-size:96px}
+  .brand{font-size:146px}
   .hero-image img{height:620px}
   .block{min-height:380px}
   .block .txt{font-size:82px}
