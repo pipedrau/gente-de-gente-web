@@ -27,6 +27,9 @@ export default function Home() {
           </div>
           <Link className="pill about" to="/about">ABOUT</Link>
           <Link className="pill contact" to="/contacto">CONTACTO</Link>
+          <a className="star-ig" href="https://www.instagram.com/gentedgente/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <span>◎</span>
+          </a>
         </div>
       </section>
 
