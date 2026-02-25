@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, ShoppingCart } from 'lucide-react'
+import { Instagram, Search, ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
           <Link className="pill about" to="/about">ABOUT</Link>
           <Link className="pill contact" to="/contacto">CONTACTO</Link>
           <a className="star-ig" href="https://www.instagram.com/gentedgente/" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <span>◎</span>
+            <Instagram />
           </a>
         </div>
       </section>
