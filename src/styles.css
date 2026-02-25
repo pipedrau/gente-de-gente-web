@@ -64,16 +64,16 @@ body, a, button, .pill{
 
 /* Other pages */
 .shell{max-width:1100px;margin:0 auto;padding:0 20px}
-header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #f0e6cf;z-index:20}
+header.navbar{position:sticky;top:0;background:#0c8b5f;border-bottom:none;z-index:20}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:74px;padding:8px 0}
-.logo{font-weight:900;font-size:1.95rem;line-height:.9;max-width:220px;color:#111;display:flex;align-items:center}
-.logo-word{display:inline}
-.logo-svg{display:none;width:min(200px,48vw);height:auto}
+.logo{font-weight:900;font-size:1.95rem;line-height:.9;max-width:220px;color:#fff;display:flex;align-items:center}
+.logo-word{display:none}
+.logo-svg{display:block;width:min(200px,48vw);height:auto}
 .menu{display:flex;align-items:center;gap:12px}
 .menu-main{display:flex;gap:10px;align-items:center}
-.menu-main a{padding:8px 12px;border-radius:999px;font-weight:700}
-.menu-main a:hover{background:#fff0ba}
-.menu-ig{margin-top:0}
+.menu-main a{padding:8px 12px;border-radius:999px;font-weight:700;color:#fff}
+.menu-main a:hover{background:rgba(255,255,255,.16)}
+.menu-ig{margin-top:0;background:#fff;color:#0c8b5f}
 .menu .menu-ig{margin-top:0}
 
 .hamburger{display:none;width:42px;height:42px;border-radius:10px;border:1.5px solid #e3d7ba;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px}
