@@ -94,8 +94,31 @@ header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #
 .product-notes{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .product-notes span{background:#eef9f2;color:#0f7f55;border:1px solid #cbebd8;padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:700}
 .form{display:grid;gap:10px;max-width:520px}
-.form input,.form textarea{padding:12px;border:1px solid #ddd;border-radius:10px}
+.form input,.form textarea,.form select{padding:12px;border:1px solid #ddd;border-radius:10px;background:#fff}
 .btn-dark{display:inline-block;background:#111;color:#fff;padding:11px 16px;border-radius:12px;margin-top:8px}
+
+.about-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch;margin-bottom:16px}
+.about-hero>div,.about-hero img{background:#fff;border:1.5px solid #e9dfc8;border-radius:16px}
+.about-hero>div{padding:16px}
+.about-hero h3{margin:0 0 10px;font-size:1.65rem}
+.about-hero p{margin:0 0 10px;line-height:1.4}
+.about-hero img{width:100%;height:100%;min-height:260px;object-fit:cover}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:10px}
+.about-card{background:#fff;border:1.5px solid #e9dfc8;border-radius:16px;padding:14px}
+.about-card h4{margin:0 0 10px;font-size:1.1rem}
+.about-card ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.value-chips{display:flex;flex-wrap:wrap;gap:8px}
+.value-chips span{background:#fff0ba;color:#9a3508;border:1px solid #f2d884;padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:700}
+
+.contact-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;padding-bottom:8px}
+.contact-card{background:#fff;border:1.5px solid #e9dfc8;border-radius:16px;padding:14px}
+.contact-card h3,.contact-card h4{margin:0 0 10px}
+.contact-list{margin:0;padding-left:18px;display:grid;gap:8px}
+.contact-side{display:grid;gap:14px}
+.faq-list details{border:1px solid #efdfbe;border-radius:10px;padding:10px 12px;background:#fffdf7}
+.faq-list details+details{margin-top:8px}
+.faq-list summary{cursor:pointer;font-weight:700}
+.faq-list p{margin:8px 0 0;color:#555}
 @media (max-width:760px){
   .grid{grid-template-columns:1fr 1fr}
   .brand img{width:min(70vw,300px)}
@@ -109,6 +132,9 @@ header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #
   .card-body h3{font-size:1.85rem}
   .price{font-size:1.75rem}
   .product-layout{grid-template-columns:1fr}
+  .about-hero{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-layout{grid-template-columns:1fr}
 }
 
 /* Desktop optimization */
