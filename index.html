@@ -15,7 +15,16 @@
       <div class="top-icons">⌕ 🛒</div>
       <div class="brand">GENTE<br/>DE GENTE</div>
       <div class="pills">
-        <a class="pill shop" href="shop.html">SHOP</a>
+        <div class="shop-wrap">
+          <button class="pill shop" id="shopToggle" type="button">SHOP</button>
+          <div class="shop-dropdown" id="shopDropdown">
+            <a href="shop-personajes.html">Personajes</a>
+            <a href="shop-ropa.html">Ropa</a>
+            <a href="shop-papeleria.html">Papelería</a>
+            <a href="shop-casa.html">Casa</a>
+            <a href="shop-todo.html">Ver todo</a>
+          </div>
+        </div>
         <a class="pill about" href="about.html">ABOUT</a>
         <a class="pill contact" href="contacto.html">CONTACTO</a>
       </div>
@@ -52,5 +61,17 @@
     </section>
     <div class="footer-space"></div>
   </main>
+  <script>
+    const shopToggle = document.getElementById('shopToggle');
+    const shopDropdown = document.getElementById('shopDropdown');
+    if (shopToggle && shopDropdown) {
+      shopToggle.addEventListener('click', () => {
+        shopDropdown.classList.toggle('open');
+      });
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.shop-wrap')) shopDropdown.classList.remove('open');
+      });
+    }
+  </script>
 </body>
 </html>
