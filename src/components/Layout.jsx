@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <>
       <header className="navbar">
         <div className="shell nav">
-          <Link className="logo" to="/">Gente de Gente</Link>
+          <Link className="logo" to="/">GENTE DE GENTE</Link>
 
           <button className="hamburger" aria-label="Abrir menú" onClick={() => setOpen(true)}>
             <span></span><span></span><span></span>

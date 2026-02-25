@@ -66,7 +66,7 @@ body, a, button, .pill{
 .shell{max-width:1100px;margin:0 auto;padding:0 20px}
 header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #f0e6cf;z-index:20}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:74px;padding:8px 0}
-.logo{font-weight:900;font-size:1.95rem;line-height:.9;max-width:180px}
+.logo{font-weight:900;font-size:1.95rem;line-height:.9;max-width:180px;color:#111}
 .menu{display:flex;align-items:center;gap:12px}
 .menu-main{display:flex;gap:10px;align-items:center}
 .menu-main a{padding:8px 12px;border-radius:999px;font-weight:700}
@@ -136,14 +136,18 @@ header.navbar{position:sticky;top:0;background:#fff8ef;border-bottom:2px solid #
 .faq-list summary{cursor:pointer;font-weight:700}
 .faq-list p{margin:8px 0 0;color:#555}
 @media (max-width:760px){
+  header.navbar{background:#0c8b5f;border-bottom:none}
   .grid{grid-template-columns:1fr 1fr}
   .brand img{width:min(70vw,300px)}
   .statement{font-size:46px}
   .block .txt{font-size:38px}
-  .nav{align-items:center;gap:10px;min-height:64px}
-  .logo{font-size:1.18rem;line-height:.88;max-width:92px}
+  .nav{align-items:center;gap:10px;min-height:72px;padding:10px 0}
+  .logo{font-size:2rem;line-height:1;max-width:none;white-space:nowrap;color:#fff}
   .desktop-menu{display:none}
-  .hamburger{display:flex}
+  .hamburger{display:flex;background:transparent;border:1.5px solid rgba(255,255,255,.45)}
+  .hamburger span{background:#fff}
+  .drawer{width:100vw;max-width:none;right:0;left:auto;padding:18px 22px}
+  .drawer-menu a{width:100%;text-align:center;padding:8px 0}
   .star-ig{width:52px;height:52px}
   .star-ig span{font-size:26px}
   .page-head h2{font-size:2.3rem}
