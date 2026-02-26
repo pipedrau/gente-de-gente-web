@@ -1,5 +1,0 @@
-
-function nav(){return `<header><div class="container nav"><a class="brand" href="index.html">Gente de Gente</a><nav class="menu"><div class="dropdown"><a href="shop.html">Shop</a><div class="dropdown-menu"><a href="shop-personajes.html">Personajes</a><a href="shop-ropa.html">Ropa</a><a href="shop-papeleria.html">Papelería</a><a href="shop-casa.html">Casa</a><a href="shop-todo.html">Ver todo</a></div></div><a href="about.html">About</a><a href="contacto.html">Contacto</a><a class="btn" target="_blank" href="https://www.instagram.com/gentedgente/">Instagram</a></nav></div></header>`}
-function footer(){return `<footer><div class="container">© ${new Date().getFullYear()} Gente de Gente · Hecho con cariño.</div></footer>`}
-function card(p){return `<article class="card"><a href="producto.html?id=${p.id}"><img src="${p.img}" alt="${p.name}"/><div class="card-body"><div class="tag">${p.cat}</div><h3>${p.name}</h3><div class="price">${p.price}</div></div></a></article>`}
-function mountLayout(content){document.body.innerHTML=nav()+`<main class="container">${content}</main>`+footer()}
