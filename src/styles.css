@@ -41,7 +41,7 @@ body, a, button, .pill{
 .pill.about{background:#ef95cb;color:#e5162f}
 .pill.contact{background:#f09d00;color:#fff6e8}
 
-.marquee{background:var(--yellow);color:#e41b1b;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:27px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08);height:55px;display:flex;align-items:center;padding:10px 10px;box-sizing:border-box}
+.marquee{background:var(--yellow);color:#e41b1b;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:27px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;height:55px;display:flex;align-items:center;padding:10px 10px;box-sizing:border-box}
 .marquee-inner{display:flex;width:max-content;animation:marq 18s linear infinite}
 .marquee .track{display:flex;flex-shrink:0;padding:0}
 .marquee span{margin-right:28px}
@@ -182,7 +182,7 @@ header.navbar{position:sticky;top:0;background:#0c8b5f;border-bottom:none;z-inde
   .pill{font-size:34px;padding:12px 34px}
   .star-ig{width:74px;height:74px}
   .star-ig svg{width:26px;height:26px}
-  .marquee{font-size:45px;height:73px;padding:10px 10px;box-sizing:border-box}
+  .marquee{font-size:45px;height:73px;padding:10px 10px;box-sizing:border-box;border:none}
   .marquee .track{padding:0}
   .hero-image img{height:560px}
   .badge{font-size:46px;padding:24px 32px 26px;left:24px;bottom:24px}
