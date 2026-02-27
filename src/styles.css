@@ -41,7 +41,7 @@ body, a, button, .pill{
 .pill.about{background:#ef95cb;color:#e5162f}
 .pill.contact{background:#f09d00;color:#fff6e8}
 
-.marquee{background:var(--yellow);color:#e41b1b;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:27px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08);height:75px;display:flex;align-items:center;margin-bottom:20px}
+.marquee{background:var(--yellow);color:#e41b1b;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:27px;letter-spacing:.5px;overflow:hidden;white-space:nowrap;border-top:4px solid rgba(0,0,0,.08);border-bottom:4px solid rgba(0,0,0,.08);height:75px;display:flex;align-items:center;padding:0 10px}
 .marquee-inner{display:flex;width:max-content;animation:marq 18s linear infinite}
 .marquee .track{display:flex;flex-shrink:0;padding:0}
 .marquee span{margin-right:28px}
