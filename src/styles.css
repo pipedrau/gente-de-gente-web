@@ -51,7 +51,7 @@ body, a, button, .pill{
 .hero-image img{width:100%;display:block;height:360px;object-fit:cover}
 .badge{position:absolute;left:16px;bottom:16px;background:#e9001d;color:#fff;padding:16px 24px 18px;font-family:'Paytone One',Inter,sans-serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:.2px;display:inline-block;transform:rotate(-10deg);clip-path:polygon(50% 0%,61% 14%,78% 8%,82% 24%,98% 24%,90% 40%,100% 52%,90% 64%,98% 80%,82% 80%,78% 96%,61% 90%,50% 100%,39% 90%,22% 96%,18% 80%,2% 80%,10% 64%,0% 52%,10% 40%,2% 24%,18% 24%,22% 8%,39% 14%)}
 
-.block{display:grid;grid-template-columns:1fr 1fr;min-height:205px}
+.block{display:grid;grid-template-columns:1fr 1fr;min-height:205px;margin-bottom:20px}
 .block .img img{width:100%;height:100%;object-fit:cover;display:block}
 .block .txt{display:flex;align-items:center;justify-content:center;padding:24px;color:#fff;font-size:46px;line-height:.95;font-family:'Paytone One',Inter,sans-serif;font-weight:400;text-transform:lowercase}
 .block.pink .txt{background:var(--pink);color:#fff;text-align:center}
