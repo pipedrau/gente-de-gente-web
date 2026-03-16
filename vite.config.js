@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/gente-de-gente-web/'
+  base: '/gente-de-gente-web/',
+  build: {
+    outDir: 'docs'
+  }
 })

@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const valores = [
   'Hecho a mano con amor',
@@ -10,6 +11,7 @@ const valores = [
 export default function About() {
   return (
     <Layout>
+      <SEO title="About" description="Una marca creada por Juanita donde cada pieza nace del cruce entre ilustración, textil, color y oficio artesanal." />
       <section className="page-head">
         <h2>About</h2>
         <div className="kicker">We celebrate people</div>

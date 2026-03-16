@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Layout from '../components/Layout'
 import ProductCard from '../components/ProductCard'
+import SEO from '../components/SEO'
 import { products } from '../data'
 
 export default function Shop() {
@@ -23,6 +24,7 @@ export default function Shop() {
 
   return (
     <Layout>
+      <SEO title={category && category !== 'todo' ? title : 'Shop'} description={`Colección ${title.toLowerCase()} de Gente de Gente. Diseño artesanal colombiano.`} />
       <section className="page-head"><h2>{title}</h2><div className="kicker">Colección {title.toLowerCase()} de Gente de Gente.</div></section>
       <div className="shop-tabs">
         {cats.map(c => {

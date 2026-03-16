@@ -1,8 +1,37 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useRef, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Search, ShoppingCart } from 'lucide-react'
+import { useCart } from '../context/CartContext'
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [searchQ, setSearchQ] = useState('')
+  const { totalItems, openCart } = useCart()
+  const navigate = useNavigate()
+  const searchRef = useRef(null)
+
+  // Cerrar búsqueda al hacer clic fuera
+  useEffect(() => {
+    if (!searchOpen) return
+    const handler = (e) => {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setSearchOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [searchOpen])
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    const term = searchQ.trim()
+    if (term) {
+      navigate(`/buscar?q=${encodeURIComponent(term)}`)
+      setSearchQ('')
+      setSearchOpen(false)
+    }
+  }
 
   return (
     <>
@@ -23,9 +52,35 @@ export default function Layout({ children }) {
               <Link to="/about">About</Link>
               <Link to="/contacto">Contacto</Link>
             </div>
-            <a className="btn-dark menu-ig" target="_blank" rel="noreferrer" href="https://www.instagram.com/gentedgente/">Instagram</a>
+            <div className="menu-actions">
+              <button className="icon-btn nav-icon-btn" aria-label="Buscar" onClick={() => setSearchOpen(v => !v)}>
+                <Search size={18} />
+              </button>
+              <button className="icon-btn nav-icon-btn cart-icon-btn" aria-label="Carrito" onClick={openCart}>
+                <ShoppingCart size={18} />
+                {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+              </button>
+              <a className="btn-dark menu-ig" target="_blank" rel="noreferrer" href="https://www.instagram.com/gentedgente/">Instagram</a>
+            </div>
           </nav>
         </div>
+
+        {searchOpen && (
+          <div className="search-bar-wrap" ref={searchRef}>
+            <form className="search-bar shell" onSubmit={handleSearch}>
+              <input
+                autoFocus
+                value={searchQ}
+                onChange={e => setSearchQ(e.target.value)}
+                placeholder="Buscar productos..."
+                aria-label="Buscar productos"
+              />
+              <button type="submit" aria-label="Buscar">
+                <Search size={16} />
+              </button>
+            </form>
+          </div>
+        )}
       </header>
 
       <div className={`drawer-backdrop ${open ? 'open' : ''}`} onClick={() => setOpen(false)}>
@@ -35,6 +90,12 @@ export default function Layout({ children }) {
             <Link to="/shop" onClick={() => setOpen(false)}>Shop</Link>
             <Link to="/about" onClick={() => setOpen(false)}>About</Link>
             <Link to="/contacto" onClick={() => setOpen(false)}>Contacto</Link>
+            <button
+              className="drawer-cart-btn"
+              onClick={() => { setOpen(false); openCart() }}
+            >
+              Carrito {totalItems > 0 && `(${totalItems})`}
+            </button>
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/gentedgente/" onClick={() => setOpen(false)}>Instagram</a>
           </nav>
         </aside>
