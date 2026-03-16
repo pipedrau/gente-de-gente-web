@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const faqs = [
   { q: '¿Hacen productos personalizados?', a: 'Sí, según disponibilidad y tipo de producto.' },
@@ -9,6 +10,7 @@ const faqs = [
 export default function Contacto() {
   return (
     <Layout>
+      <SEO title="Contacto" description="Escríbenos para cotizar, pedir productos personalizados o colaborar con Gente de Gente." />
       <section className="page-head">
         <h2>Contacto</h2>
         <div className="kicker">Cuéntanos qué te gustaría comprar o cotizar</div>
