@@ -1,10 +1,26 @@
-import { createContext, useContext, useState, useCallback } from 'react'
+import { createContext, useContext, useState, useCallback, useEffect } from 'react'
 
 const CartContext = createContext(null)
+const STORAGE_KEY = 'gdg_cart'
+
+function loadCart() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
 
 export function CartProvider({ children }) {
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState(loadCart)
   const [cartOpen, setCartOpen] = useState(false)
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items))
+    } catch {}
+  }, [items])
 
   const openCart = useCallback(() => setCartOpen(true), [])
   const closeCart = useCallback(() => setCartOpen(false), [])

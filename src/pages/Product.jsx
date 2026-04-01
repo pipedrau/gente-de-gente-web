@@ -1,20 +1,46 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import { products } from '../data'
+import { getProduct } from '../lib/api'
 import { useCart } from '../context/CartContext'
 
 export default function Product() {
   const { id } = useParams()
   const { addToCart, openCart } = useCart()
-  const [size, setSize] = useState('Mini')
+  const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [notFound, setNotFound] = useState(false)
+  const [size, setSize] = useState('')
   const [qty, setQty] = useState(1)
   const [added, setAdded] = useState(false)
 
-  const p = products.find(x => x.id === id)
+  useEffect(() => {
+    setLoading(true)
+    setNotFound(false)
+    setProduct(null)
+    getProduct(id)
+      .then(p => {
+        setProduct(p)
+        setSize(p.sizes?.[0] || 'Único')
+      })
+      .catch(() => setNotFound(true))
+      .finally(() => setLoading(false))
+  }, [id])
 
-  if (!p) {
+  if (loading) {
+    return (
+      <Layout>
+        <section className="page-head"><h2>Cargando...</h2></section>
+        <div className="product-layout product-detail">
+          <div className="card-skeleton" style={{ height: 400 }} />
+          <div className="card-skeleton" style={{ height: 400 }} />
+        </div>
+      </Layout>
+    )
+  }
+
+  if (notFound || !product) {
     return (
       <Layout>
         <SEO title="Producto no encontrado" />
@@ -34,7 +60,7 @@ export default function Product() {
   }
 
   const handleAddToCart = () => {
-    addToCart(p, size, qty)
+    addToCart(product, size, qty)
     setAdded(true)
     openCart()
     setTimeout(() => setAdded(false), 2000)
@@ -43,28 +69,38 @@ export default function Product() {
   return (
     <Layout>
       <SEO
-        title={p.name}
-        description={`${p.name} — ${p.price}. Pieza artesanal de Gente de Gente.`}
-        image={p.img}
+        title={product.name}
+        description={`${product.name} — ${product.price}. Pieza artesanal de Gente de Gente.`}
+        image={product.img}
       />
-      <section className="page-head"><h2>{p.name}</h2><div className="kicker">Detalle de producto</div></section>
+      <section className="page-head">
+        <h2>{product.name}</h2>
+        <div className="kicker">Detalle de producto</div>
+      </section>
       <section className="product-layout product-detail">
-        <div className="product-image"><img src={p.img} alt={p.name} /></div>
+        <div className="product-image">
+          <img src={product.img} alt={product.name} />
+        </div>
         <div className="product-panel">
-          <span className="tag">{p.cat}</span>
-          <p>{p.name} es una pieza creada para celebrar lo cotidiano con diseño, color y carácter artesanal.</p>
-          <div className="price">{p.price}</div>
+          <span className="tag">{product.cat}</span>
+          <p>{product.description || `${product.name} es una pieza creada para celebrar lo cotidiano con diseño, color y carácter artesanal.`}</p>
+          <div className="price">{product.price}</div>
+          {product.compare_price && (
+            <div className="price-compare">${Number(product.compare_price).toLocaleString('es-CO')} COP</div>
+          )}
           <div className="product-controls">
-            <label>Tamaño
-              <select value={size} onChange={e => setSize(e.target.value)}>
-                <option>Mini</option>
-                <option>Mediano</option>
-              </select>
-            </label>
+            {product.sizes && product.sizes.length > 0 && (
+              <label>Talla / Tamaño
+                <select value={size} onChange={e => setSize(e.target.value)}>
+                  {product.sizes.map(s => <option key={s}>{s}</option>)}
+                </select>
+              </label>
+            )}
             <label>Cantidad
               <input
                 type="number"
                 min="1"
+                max={product.stock || 99}
                 value={qty}
                 onChange={e => setQty(Math.max(1, parseInt(e.target.value) || 1))}
               />
@@ -77,6 +113,7 @@ export default function Product() {
           <div className="product-notes">
             <span>Hecho a mano</span>
             <span>Envío nacional</span>
+            {product.stock > 0 && <span>{product.stock} disponibles</span>}
           </div>
         </div>
       </section>

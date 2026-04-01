@@ -6,7 +6,7 @@ export default function CartDrawer() {
   const { items, removeFromCart, updateQuantity, totalItems, cartOpen, closeCart } = useCart()
 
   const total = items.reduce((sum, i) => {
-    const num = parseInt(i.product.price.replace(/[^0-9]/g, ''), 10)
+    const num = i.product.priceNum ?? parseInt(i.product.price.replace(/[^0-9]/g, ''), 10)
     return sum + (isNaN(num) ? 0 : num * i.quantity)
   }, 0)
 
@@ -73,14 +73,21 @@ export default function CartDrawer() {
                 <span>Total estimado</span>
                 <strong>${total.toLocaleString('es-CO')} COP</strong>
               </div>
-              <a
+              <Link
                 className="btn-dark cart-checkout"
-                href={`https://wa.me/573000000000?text=${whatsappMsg}`}
+                to="/checkout"
+                onClick={closeCart}
+              >
+                Ir al checkout
+              </Link>
+              <a
+                className="cart-go-checkout"
+                href={`https://wa.me/573214981106?text=${whatsappMsg}`}
                 target="_blank"
                 rel="noreferrer"
                 onClick={closeCart}
               >
-                Pedir por WhatsApp
+                O pedir por WhatsApp
               </a>
               <p className="cart-note">* Los precios son referenciales. Te confirmamos el total por WhatsApp.</p>
             </div>

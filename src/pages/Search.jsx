@@ -1,21 +1,23 @@
-import { useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import ProductCard from '../components/ProductCard'
 import SEO from '../components/SEO'
-import { products } from '../data'
+import { searchProducts } from '../lib/api'
 
 export default function Search() {
   const [searchParams] = useSearchParams()
   const q = searchParams.get('q') || ''
+  const [results, setResults] = useState([])
+  const [loading, setLoading] = useState(false)
 
-  const results = useMemo(() => {
-    if (!q.trim()) return []
-    const term = q.toLowerCase()
-    return products.filter(p =>
-      p.name.toLowerCase().includes(term) ||
-      p.cat.toLowerCase().includes(term)
-    )
+  useEffect(() => {
+    if (!q.trim()) { setResults([]); return }
+    setLoading(true)
+    searchProducts(q.trim())
+      .then(setResults)
+      .catch(console.error)
+      .finally(() => setLoading(false))
   }, [q])
 
   return (
@@ -24,13 +26,14 @@ export default function Search() {
       <section className="page-head">
         <h2>Búsqueda</h2>
         <div className="kicker">
-          {q
-            ? `${results.length} resultado${results.length !== 1 ? 's' : ''} para "${q}"`
-            : 'Escribe algo para buscar'}
+          {loading
+            ? 'Buscando...'
+            : q
+              ? `${results.length} resultado${results.length !== 1 ? 's' : ''} para "${q}"`
+              : 'Escribe algo para buscar'}
         </div>
       </section>
-
-      {q && (
+      {!loading && q && (
         results.length > 0
           ? <section className="grid shop-grid">{results.map(p => <ProductCard key={p.id} p={p} />)}</section>
           : (
