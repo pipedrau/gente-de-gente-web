@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react()],
   base: isVercel ? '/' : '/gente-de-gente-web/',
   build: {
-    outDir: 'docs'
+    outDir: isVercel ? 'dist' : 'docs'
   }
 })
